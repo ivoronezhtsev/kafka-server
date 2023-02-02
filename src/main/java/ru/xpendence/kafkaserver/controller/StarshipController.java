@@ -1,5 +1,6 @@
 package ru.xpendence.kafkaserver.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,14 +17,10 @@ import ru.xpendence.kafkaserver.service.StarshipService;
  */
 @RestController
 @RequestMapping("/starship")
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class StarshipController {
 
     private final StarshipService service;
-
-    @Autowired
-    public StarshipController(StarshipService service) {
-        this.service = service;
-    }
 
     @PostMapping
     public void send(@RequestBody StarshipDto dto) {

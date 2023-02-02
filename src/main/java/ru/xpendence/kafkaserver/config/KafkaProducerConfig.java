@@ -15,12 +15,7 @@ import ru.xpendence.kafkaserver.dto.StarshipDto;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Author: Vyacheslav Chernyshov
- * Date: 12.02.19
- * Time: 22:06
- * e-mail: 2262288@gmail.com
- */
+
 @Configuration
 public class KafkaProducerConfig {
 

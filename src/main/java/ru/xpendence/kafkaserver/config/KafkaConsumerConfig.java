@@ -19,12 +19,6 @@ import ru.xpendence.kafkaserver.dto.AbstractDto;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Author: Vyacheslav Chernyshov
- * Date: 12.02.19
- * Time: 21:39
- * e-mail: 2262288@gmail.com
- */
 @Configuration
 public class KafkaConsumerConfig {
 

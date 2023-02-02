@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(KafkaServerApplication.class);
+        return application.sources(KafkaServerApplication.class); //todo Что это?
     }
 
 }
