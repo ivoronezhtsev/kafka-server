@@ -12,8 +12,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.kafka.annotation.EnableKafka;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spring.web.plugins.Docket;
 
 import java.io.IOException;
+
+import static springfox.documentation.spi.DocumentationType.SWAGGER_2;
 
 @SpringBootApplication
 @EnableKafka
@@ -47,6 +52,15 @@ public class KafkaServerApplication {
     @Bean
     public ObjectMapper objectMapper() {
         return new ObjectMapper();
+    }
+
+    @Bean
+    public Docket api() {
+        return new Docket(SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("ru.xpendence.kafkaserver"))
+                .paths(PathSelectors.any())
+                .build();
     }
 }
 
