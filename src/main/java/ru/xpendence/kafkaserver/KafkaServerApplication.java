@@ -16,8 +16,6 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spring.web.plugins.Docket;
 
-import java.io.IOException;
-
 import static springfox.documentation.spi.DocumentationType.SWAGGER_2;
 
 @SpringBootApplication
@@ -43,7 +41,7 @@ public class KafkaServerApplication {
     public JsonDeserializer jsonDeserializer() {
         return new JsonDeserializer() {
             @Override
-            public Object deserialize(JsonParser p, DeserializationContext context) throws IOException {
+            public Object deserialize(JsonParser p, DeserializationContext context) {
                 return null;
             }
         };
