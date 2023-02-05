@@ -1,5 +1,6 @@
 ## Запуск кафки
 ### Запускаем zookeeper
+Предварительно переименовать zoo_sample.cfg zoo.cfg в папке conf<br>
 sudo /usr/local/apache-zookeeper-3.8.1-bin/bin/zkServer.sh start</br>
 ### Запускаем kafka
 sudo /usr/local/kafka_2.12-3.3.2/bin/kafka-server-start.sh /usr/local/kafka_2.12-3.3.2/config/server.properties
