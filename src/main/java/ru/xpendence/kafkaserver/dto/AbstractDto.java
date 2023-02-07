@@ -1,16 +1,18 @@
 package ru.xpendence.kafkaserver.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Data;
-
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
-
-@Data
 public abstract class AbstractDto implements Serializable {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
